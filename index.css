@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.box{
+    position: relative;
+    width: 400px;
+    height: 340px;
+    background-color: rgb(255, 255, 255);
+}
+
+.box span{
+    height: 350px;
+    position: absolute;
+    inset: 0;
+    transition: 0.5s;
+    background:  url(img/150-1500583_heart-shape-vector-silhouette-black-and-white-vector.png);
+    background-size: cover;
+}
+
+.box span:nth-child(1){
+    clip-path: polygon(0 0, 53% 0, 51% 100%, 0% 100%);
+    /* background-color: aqua; */
+}
+
+.box span:nth-child(2){
+    clip-path: polygon(100% 0, 53% 0, 51% 100%, 100% 100%);
+    /* background-color: blue; */
+}
+
+.box:hover span:nth-child(1){
+    transform: translate(-40px, -60px) rotate(-15deg);
+    transition-delay: 0s;
+}
+
+.box:hover span:nth-child(2){
+    transform: translate(40px, -100px) rotate(25deg);
+    transition-delay: 0.25s;
+}
